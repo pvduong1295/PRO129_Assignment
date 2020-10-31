@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author phamv
- */
+import java.util.ArrayList;
+
+
 public class main {
 
     /**
@@ -15,6 +9,34 @@ public class main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //Tạo 2 ArrayList Problem và Contestant
+        ArrayList<Problem> arrProblem = new ArrayList();
+        ArrayList<Contestant> arrContestant = new ArrayList();
+        // Truyền thông tin từ file .dat vào 2 Array
+        
+    }
+    
+    //Login system function
+    public void addProblem(){
+        // 
+        throw new UnsupportedOperationException("Chưa làm!");
+    }
+    
+    public void updateProblem(){
+        // Lấy 
+        throw new UnsupportedOperationException("Chưa làm!");
+    }
+    
+    public void showAllProblem(){
+        throw new UnsupportedOperationException("Chưa làm!");
+    }
+    
+    public void addContestant(){
+        throw new UnsupportedOperationException("Chưa làm!");
+    }
+    
+    public void editContestantInfo(){
+        throw new UnsupportedOperationException("Chưa làm!");
     }
     
 }
