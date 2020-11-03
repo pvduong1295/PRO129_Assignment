@@ -22,7 +22,14 @@ public class main {
             Scanner sc = new Scanner (System.in);
             System.out.println("Contest Management System (CMS)");
             System.out.println("Press 1 to Login.");
-            System.out.println("");
+            System.out.println("Press 2 to edit Contestants profile.");
+            System.out.println("Press 3 to add a Problem.");
+            System.out.println("Press 4 to update Problem.");
+            System.out.println("Press 5 to show all Problems.");
+            System.out.println("Press 6 to generate Contest.");
+            System.out.println("Press 7 to show ContestInfo.");
+            System.out.println("Press 0 to Exit Program.");
+            System.out.println("Choose an option :");
             k = sc.nextInt();
             if(k==1){
                 Login();
