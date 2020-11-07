@@ -1,28 +1,32 @@
 
+import java.io.Serializable;
 import java.util.Random;
 
 
-public class Contestant {
+public class Contestant implements Serializable {
     private String name;
     private String id;
     private String email;
     private String mobilephone;
     private int rank;
+    private String password;
     // Khai báo có biến và không có biến
     public Contestant(){
-        this.name = name;
+        this.name = "";
         this.id = generateID();
-        this.email = email;
-        this.mobilephone = mobilephone;
+        this.email = "";
+        this.mobilephone = "";
         this.rank = 0;
+        this.password = "123456";
     }
 
-    public Contestant(String name, String id, String email, String mobilephone, int rank) {
+    public Contestant(String name, String id, String email, String mobilephone, int rank, String password) {
         this.name = name;
         this.id = id;
         this.email = email;
         this.mobilephone = mobilephone;
         this.rank = rank;
+        this.password = password;
     }
     
     // thêm getter , setter
@@ -38,6 +42,10 @@ public class Contestant {
         return id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+    
     public String getEmail() {
         return email;
     }
@@ -62,6 +70,15 @@ public class Contestant {
         this.rank = rank;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+
     // Thêm hàm toString để hiện thông tin Problem
     @Override
     public String toString() {
@@ -79,6 +96,5 @@ public class Contestant {
         String new_text = text.toString();
         return new_text;
     }
-    
-    
+        
 }
