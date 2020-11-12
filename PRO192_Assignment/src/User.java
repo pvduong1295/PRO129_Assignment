@@ -1,16 +1,14 @@
 
 import java.io.Serializable;
 import java.util.Random;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
 
-public class Problem implements Comparable<Problem>, Serializable{
 
+public class User implements Serializable{// Class cha Serialize thì subclass tự động serialize
+    
     
     
     
     private  String generateID(){
-        
         
         Random rand = new Random();
         String Num = "1234567890";
@@ -30,6 +28,4 @@ public class Problem implements Comparable<Problem>, Serializable{
         String new_char = char_text.toString();
         return new_char+new_num;
     }
-    
-    
 }
