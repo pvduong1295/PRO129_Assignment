@@ -44,8 +44,6 @@ public class ContestantsSystem {
         throw new UnsupportedOperationException("Chưa làm!");
     }
 
-    
-
     public boolean ContestantLogin() {
         throw new UnsupportedOperationException("Chưa làm!");
     }
