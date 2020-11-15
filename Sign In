@@ -1,0 +1,67 @@
+
+    public static void signIn() {
+        Scanner sc = new Scanner(System.in);
+        Scanner sc_int = new Scanner(System.in);
+        Contestant newContestant = new Contestant();
+        int k = 1;
+        while (k != 0) {
+            System.out.println("Sign In");
+            //============================
+            System.out.println("Your auto generated ID: " + newContestant.getId());
+            String name = "";
+            while ("".equals(name)) {
+                System.out.println("Name:");
+                name = sc.nextLine();
+                newContestant.setName(name);
+                if ("".equals(name)) {
+                    System.out.println("Name cannot be emty . Please type your name again!: ");
+                }
+            }
+            //=====================
+            String email = "";
+            while ("".equals(email)) {
+                System.out.println("Email:");
+                email = sc.nextLine();
+                newContestant.setEmail(email);
+                if ("".equals(email)) {
+                    System.out.println("Email cannot be emty . Please type your Email again!: ");
+                }
+            }
+            //=====================
+            String mobilephone = "";
+            while ("".equals(mobilephone)) {
+                System.out.println("Mobilephone:");
+                mobilephone = sc.nextLine();
+                newContestant.setMobilephone(mobilephone);
+                if ("".equals(mobilephone)) {
+                    System.out.println("Mobilephone cannot be emty . Please type your Mobilephone again!: ");
+                }
+            }
+            //======================
+            String password = "";
+            while ("".equals(password)) {
+                System.out.println("Password:");
+                password = sc.nextLine();
+                newContestant.setPassword(password);
+                if ("".equals(password)) {
+                    System.out.println("Password cannot be emty . Please type your Password again!: ");
+                }
+            }
+            
+            System.out.println("Do you want to sign these in ?(y/n)");
+            String ans = sc.nextLine();
+            if (ans.equals("y")) {
+                arrContestant.add(newContestant);
+                writeContestant();
+                System.out.println("Done!");
+                k = 0;
+            } else {
+                System.out.println("Do you want to sign in again or back to Menu ?");
+                System.out.println("0.Back to Menu");
+                System.out.println("1.Sign another");
+                k = sc_int.nextInt();
+            }
+        }
+        
+        System.out.println("====================================================");
+    }
