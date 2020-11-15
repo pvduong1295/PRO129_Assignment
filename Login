@@ -1,0 +1,23 @@
+public static boolean Login() {
+        Scanner sc = new Scanner(System.in);
+        Scanner sc_int = new Scanner(System.in);
+        System.out.println("LOG IN");
+        int k = 1;
+        while (k != 0) {
+            System.out.println("For tester: id(WA6576), password(richkid)");
+            boolean check_Account = searchContestant();
+            if (check_Account == true) {
+                String password = "";
+                System.out.println("Password:");
+                password = sc.nextLine();
+                if (password.compareTo(arrContestant.get(Contestant_index).getPassword()) == 0) {
+                    loggedIn = arrContestant.get(Contestant_index);
+                    return true;
+                }
+            }
+            k=0;
+            return false;
+            
+        }
+        return false;
+    }
