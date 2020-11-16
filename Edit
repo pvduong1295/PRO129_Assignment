@@ -30,3 +30,58 @@ private static void editContestantProfile() {
                     System.out.println("Done!");
                     k=0;
                     writeContestant();
+}if (k == 2) {
+                    System.out.println("Old email: " + arrContestant.get(Contestant_index).getEmail());
+                    System.out.println("New email: ");
+                    String email = sc.nextLine();
+
+                    while (email.equals("")) {
+                        email = sc.nextLine();
+
+                        if (email.equals("")) {
+                            System.out.println("Email cannot be emty!Please type again: ");
+                        }
+                    }
+                    arrContestant.get(Contestant_index).setEmail(email);
+                    System.out.println("Done!");
+                    k=0;
+                    writeContestant();
+                }if (k == 3) {
+                    System.out.println("Old mobilephone: " + arrContestant.get(Contestant_index).getMobilephone());
+                    System.out.println("New mobilephone: ");
+                    String mobilephone = sc.nextLine();
+
+                    while (mobilephone.equals("")) {
+                        mobilephone = sc.nextLine();
+
+                        if (mobilephone.equals("")) {
+                            System.out.println("Mobilephone cannot be emty!Please type again: ");
+                        }
+                    
+                    }
+                    arrContestant.get(Contestant_index).setMobilephone(mobilephone);
+                    System.out.println("Done!");
+                    k=0;
+                    writeContestant();
+                }if (k == 4) {
+                    System.out.println("Old password: " + arrContestant.get(Contestant_index).getPassword());
+                    System.out.println("New password: ");
+                    String password = sc.nextLine();
+
+                    while (password.equals("")) {
+                        password = sc.nextLine();
+
+                        if (password.equals("")) {
+                            System.out.println("password cannot be emty!Please type again: ");
+                        }
+                    }
+                    arrContestant.get(Contestant_index).setPassword(password);
+                    System.out.println("Done!");
+                    k=0;
+                    writeContestant();
+                }else{
+                    if(k!=0)System.out.println("Please choose from 0 to 4!");
+                }
+            }
+        }
+    }    
