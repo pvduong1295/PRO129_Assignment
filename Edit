@@ -1,0 +1,32 @@
+private static void editContestantProfile() {
+        Scanner sc_num = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        boolean check_Contestant = searchContestant();
+
+        if (check_Contestant) {
+            System.out.println("1.Edit name.");
+            System.out.println("2.Edit email.");
+            System.out.println("3.Edit mobilephone.");
+            System.out.println("4.Edit password.");
+            System.out.println("0.Back to Menu.");
+            int k = 1;
+            while (k != 0) {
+                System.out.println("Option :");
+                k = sc_num.nextInt();
+                System.out.println("\n");
+                if (k == 1) {
+                    System.out.println("Old name: " + arrContestant.get(Contestant_index).getName());
+                    System.out.println("New name: ");
+                    String name = sc.nextLine();
+
+                    while (name.equals("")) {
+                        name = sc.nextLine();
+                        
+                        if (name.equals("")) {
+                            System.out.println("Name cannot be emty!Please type again: ");
+                        }
+                    }
+                    arrContestant.get(Contestant_index).setName(name);
+                    System.out.println("Done!");
+                    k=0;
+                    writeContestant();
