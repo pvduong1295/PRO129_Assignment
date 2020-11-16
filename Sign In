@@ -16,3 +16,51 @@ public static void signIn() {
                     System.out.println("Name cannot be emty . Please type your name again!: ");
                 }
             }
+            //=====================
+            String email = "";
+            while ("".equals(email)) {
+                System.out.println("Email:");
+                email = sc.nextLine();
+                newContestant.setEmail(email);
+                if ("".equals(email)) {
+                    System.out.println("Email cannot be emty . Please type your Email again!: ");
+                }
+            }
+            //=====================
+            String mobilephone = "";
+            while ("".equals(mobilephone)) {
+                System.out.println("Mobilephone:");
+                mobilephone = sc.nextLine();
+                newContestant.setMobilephone(mobilephone);
+                if ("".equals(mobilephone)) {
+                    System.out.println("Mobilephone cannot be emty . Please type your Mobilephone again!: ");
+                }
+            }
+            //======================
+            String password = "";
+            while ("".equals(password)) {
+                System.out.println("Password:");
+                password = sc.nextLine();
+                newContestant.setPassword(password);
+                if ("".equals(password)) {
+                    System.out.println("Password cannot be emty . Please type your Password again!: ");
+                }
+            }
+            
+            System.out.println("Do you want to sign these in ?(y/n)");
+            String ans = sc.nextLine();
+            if (ans.equals("y")) {
+                arrContestant.add(newContestant);
+                writeContestant();
+                System.out.println("Done!");
+                k = 0;
+            } else {
+                System.out.println("Do you want to sign in again or back to Menu ?");
+                System.out.println("0.Back to Menu");
+                System.out.println("1.Sign another");
+                k = sc_int.nextInt();
+            }
+        }
+        
+        System.out.println("====================================================");
+    }
