@@ -10,3 +10,14 @@ public static boolean Login() {
                 String password = "";
                 System.out.println("Password:");
                 password = sc.nextLine();
+if (password.compareTo(arrContestant.get(Contestant_index).getPassword()) == 0) {
+                    loggedIn = arrContestant.get(Contestant_index);
+                    return true;
+                }
+            }
+            k=0;
+            return false;
+            
+        }
+        return false;
+    }
