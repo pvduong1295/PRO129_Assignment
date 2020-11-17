@@ -27,6 +27,7 @@ public class main {
                         C_system.mainMenuofContestant();
                     } else {
                         System.out.println("Do you have an Account?(y/n)");
+                        sc.nextLine();
                         String yon = sc.nextLine();
                         if (yon.equals("n")) {
                             C_system.signIn();
@@ -43,6 +44,7 @@ public class main {
                         T_system.mainMenuofTeacher();
                     } else {
                         System.out.println("Do you have an Account?(y/n)");
+                        sc.nextLine();
                         String yon = sc.nextLine();
                         if (yon.equals("n")) {
                             T_system.signIn();
